@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   keywords: ["beauty parlour", "women salon", "bridal makeup", "hair spa", "facial", "manicure", "pedicure", "Khusi Beauty Parlour"],
 };
 
+import { CustomCursor } from "@/components/ui/CustomCursor";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${playfair.variable} antialiased min-h-screen bg-[#fffafa]`}>
+        <CustomCursor />
         {children}
+        <WhatsAppButton />
         <Toaster position="top-center" />
       </body>
     </html>
